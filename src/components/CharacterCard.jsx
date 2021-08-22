@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/CharacterCard.scss';
+import '../styles/CharacterCardsHolder.scss';
 
 export default function CharacterCard(props) {
     const [alive, setAlive] = useState(props.status);

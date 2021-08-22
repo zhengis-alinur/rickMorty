@@ -2,44 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd75333b-88ab-47a0-8110-794590df1a41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/rick.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/rick.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Variables/variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/BottomBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/BottomBarItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CardsHolder.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CharacterCard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SearchBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/CharactersPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/BottomBar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/CardsHolder.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/CharacterCard.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/SearchBar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/fonts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/LocationCard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/LocationCardsHolder.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/LocationsPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/CharacterCardsHolder.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/LocationCardsHolder.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CardsHolder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CharacterCardsHolder.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CharacterCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CharacterCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CharactersPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CharactersPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/BottomBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/BottomBar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/CharacterCard.scss" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JSX" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -61,14 +47,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Data\Coding\Front-End\SimpleCode\my-app\src\components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Data\Coding\Front-End\SimpleCode\my-app\src\Variables" />
       <recent name="D:\Data\Coding\Front-End\SimpleCode\my-app\src\components" />
@@ -105,11 +97,17 @@
       <workItem from="1629370413287" duration="6344000" />
       <workItem from="1629390544349" duration="1743000" />
       <workItem from="1629443722184" duration="804000" />
-      <workItem from="1629645489574" duration="10395000" />
+      <workItem from="1629645489574" duration="10462000" />
+      <workItem from="1629660428188" duration="1163000" />
+      <workItem from="1629661615949" duration="4216000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
