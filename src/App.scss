@@ -1,0 +1,12 @@
+@import "./Variables/variables.scss";
+@import "./styles/fonts";
+
+.App {
+  width: 100%;
+  font-family: Roboto, sans-serif;
+  padding: 16px;
+}
+.page {
+  position: relative;
+  height: 100vh;
+}

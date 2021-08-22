@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dd75333b-88ab-47a0-8110-794590df1a41" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/rick.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/rick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Variables/variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/BottomBar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/BottomBarItem.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CardsHolder.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CharacterCard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SearchBar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/CharactersPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/BottomBar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/CardsHolder.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/CharacterCard.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/SearchBar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/fonts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1wnUwqfRs8xQgZQeT7KMv3HihpG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Data\Coding\Front-End\SimpleCode\my-app\src\Variables" />
+      <recent name="D:\Data\Coding\Front-End\SimpleCode\my-app\src\components" />
+      <recent name="D:\Data\Coding\Front-End\SimpleCode\my-app\src\styles" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/my-app/build/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd75333b-88ab-47a0-8110-794590df1a41" name="Default Changelist" comment="" />
+      <created>1629094094184</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1629094094184</updated>
+      <workItem from="1629094097805" duration="8052000" />
+      <workItem from="1629102264991" duration="9278000" />
+      <workItem from="1629112141263" duration="1186000" />
+      <workItem from="1629119321246" duration="43000" />
+      <workItem from="1629119382135" duration="554000" />
+      <workItem from="1629192237854" duration="1330000" />
+      <workItem from="1629195863049" duration="614000" />
+      <workItem from="1629216761466" duration="4884000" />
+      <workItem from="1629300974023" duration="2412000" />
+      <workItem from="1629370413287" duration="6344000" />
+      <workItem from="1629390544349" duration="1743000" />
+      <workItem from="1629443722184" duration="804000" />
+      <workItem from="1629645489574" duration="10395000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
