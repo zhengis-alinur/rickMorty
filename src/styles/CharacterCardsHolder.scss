@@ -30,6 +30,7 @@
   }
 
   &.map {
+    justify-content: space-between;
     .character-card-wrapper{
       flex-direction: column;
       width: 164px;

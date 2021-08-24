@@ -5,7 +5,7 @@ export default function BottomBar(props) {
     return <div className={"bottombar-item"}>
         <div className="bottombar-item">
             {props.icon}
-            <p className="grey-text">Персонажи</p>
+            <p className="grey-text">{props.name}</p>
         </div>
     </div>
 }

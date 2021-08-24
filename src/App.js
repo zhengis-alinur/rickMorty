@@ -1,13 +1,10 @@
 import './App.scss';
-import CharactersPage from './pages/CharactersPage';
-import BottomBar from './components/BottomBar';
-import LocationsPage from './pages/LocationsPage';
+import CharacterPage from './pages/CharacterPage';
 
 function App() {
   return (
     <div className="App">
-        <CharactersPage />
-        <BottomBar />
+        <CharacterPage />
     </div>
   );
 }

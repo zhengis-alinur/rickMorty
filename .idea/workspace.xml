@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd75333b-88ab-47a0-8110-794590df1a41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/LocationCard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LocationCardsHolder.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/LocationsPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/CharacterCardsHolder.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/LocationCardsHolder.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CharacterCaptionItem.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/EpisodeCard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/EpisodeCardsHolder.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/CharacterPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/CharacterPage.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/EpisodeCardsHolder.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CardsHolder.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CharacterCardsHolder.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CharacterCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CharacterCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/CharactersPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CharactersPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/BottomBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/BottomBar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/CharacterCard.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Variables/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Variables/variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BottomBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BottomBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BottomBarItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BottomBarItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/CharacterCardsHolder.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/CharacterCardsHolder.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/fonts.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +101,9 @@
       <workItem from="1629443722184" duration="804000" />
       <workItem from="1629645489574" duration="10462000" />
       <workItem from="1629660428188" duration="1163000" />
-      <workItem from="1629661615949" duration="4216000" />
+      <workItem from="1629661615949" duration="7250000" />
+      <workItem from="1629691790341" duration="211000" />
+      <workItem from="1629812572606" duration="3955000" />
     </task>
     <servers />
   </component>

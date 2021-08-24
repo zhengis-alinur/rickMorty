@@ -23,9 +23,9 @@ const settings = <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xml
 
 export default function BottomBar(props) {
     return <div className={"bottombar"}>
-        <BottomBarItem icon={characters}/>
-        <BottomBarItem icon={locactions}/>
-        <BottomBarItem icon={episodes}/>
-        <BottomBarItem icon={settings}/>
+        <BottomBarItem name={"Персонажи"} icon={characters}/>
+        <BottomBarItem name={"Локации"} icon={locactions}/>
+        <BottomBarItem name={"Эпизоды"} icon={episodes}/>
+        <BottomBarItem name={"Настройки"} icon={settings}/>
     </div>
 }

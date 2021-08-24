@@ -4,9 +4,17 @@
 .App {
   width: 100%;
   font-family: Roboto, sans-serif;
-  padding: 16px;
+  font-size: 13px;
+  line-height: 150%;
+  letter-spacing: 0.5px;
 }
 .page {
   position: relative;
   height: 100vh;
+  padding: 16px;
+}
+
+.horizontal {
+  display: flex;
+  justify-content: space-between;
 }
