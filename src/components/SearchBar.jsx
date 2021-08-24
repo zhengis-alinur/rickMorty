@@ -9,11 +9,16 @@ export default function SearchBar(props) {
                 <path d="M14.15 14.0601L20 19.9901" stroke="#5B6975" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             <input className="searchbar" type="text" placeholder={props.placeholder}/>
-            <div className="vl"></div>
-            <svg className="filter-icon" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.5 10.5L16.707 5.293C16.895 5.105 17 4.851 17 4.586V2C17 1.448 16.552 1 16 1H2C1.448 1 1 1.448 1 2V4.586C1 4.851 1.105 5.106 1.293 5.293L6.5 10.5" stroke="#5B6975" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M6.5 10.5V16.749C6.5 17.562 7.264 18.159 8.053 17.962L10.553 17.337C11.109 17.198 11.5 16.698 11.5 16.124V10.5" stroke="#5B6975" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
+            {
+                props.filter === true ?
+                <>
+                    <div className="vl"></div>
+                    <svg className="filter-icon" width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.5 10.5L16.707 5.293C16.895 5.105 17 4.851 17 4.586V2C17 1.448 16.552 1 16 1H2C1.448 1 1 1.448 1 2V4.586C1 4.851 1.105 5.106 1.293 5.293L6.5 10.5" stroke="#5B6975" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M6.5 10.5V16.749C6.5 17.562 7.264 18.159 8.053 17.962L10.553 17.337C11.109 17.198 11.5 16.698 11.5 16.124V10.5" stroke="#5B6975" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg></>
+                : true
+            }
         </div>
     </div>
 }

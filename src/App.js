@@ -1,10 +1,10 @@
 import './App.scss';
-import CharacterPage from './pages/CharacterPage';
+import EpisodesPage from './pages/EpisodesPage';
 
 function App() {
   return (
     <div className="App">
-        <CharacterPage />
+        <EpisodesPage />
     </div>
   );
 }

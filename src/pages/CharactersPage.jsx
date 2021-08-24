@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import SearchBar from '../components/SearchBar';
 import CharacterCardsHolder from '../components/CharacterCardsHolder';
+import BottomBar from '../components/BottomBar';
+
 export default function CharactersPage(props) {
     const [view, setView] = useState('map');
 
@@ -9,7 +11,7 @@ export default function CharactersPage(props) {
     }
 
     return <div className={"page"}>
-        <SearchBar placeholder={"Найти персонажа"}/>
+        <SearchBar placeholder={"Найти персонажа"} filter={true}/>
         <div className="caption">
             <p className={"grey-caption"}>{"Всего персонажей: 200"}</p>
             <div className="view-toggle-btn" onClick={toggleView}>
@@ -24,5 +26,6 @@ export default function CharactersPage(props) {
             </div>
         </div>
         <CharacterCardsHolder view={view}/>
+        <BottomBar />
     </div>
 }
