@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd75333b-88ab-47a0-8110-794590df1a41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/EpisodesPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/EpisodesPage.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/EpisodePage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/EpisodePage.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/CharactersPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CharactersPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LocationsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LocationsPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CharacterCaptionItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CaptionItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CharacterPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CharacterPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/CharacterPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/CharacterPage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/EpisodeCardsHolder.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/EpisodeCardsHolder.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/fonts.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +98,7 @@
       <workItem from="1629660428188" duration="1163000" />
       <workItem from="1629661615949" duration="7250000" />
       <workItem from="1629691790341" duration="211000" />
-      <workItem from="1629812572606" duration="5627000" />
+      <workItem from="1629812572606" duration="11814000" />
     </task>
     <servers />
   </component>

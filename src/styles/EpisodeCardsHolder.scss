@@ -1,6 +1,7 @@
 .cards-holder {
   display: flex;
   flex-direction: column;
+  width: 100%;
   .episode-card-wrapper{
     position: relative;
     display: flex;
@@ -8,6 +9,9 @@
     margin-bottom: 24px;
     .episode-caption {
       text-align: start;
+      .title {
+
+      }
     }
     .episode-img {
       width: 74px;

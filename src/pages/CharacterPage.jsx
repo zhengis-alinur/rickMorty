@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/CharacterPage.scss';
-import CharacterCaptionItem from '../components/CharacterCaptionItem';
+import CaptionItem from '../components/CaptionItem';
 import EpisodeCardsHolder from '../components/EpisodeCardsHolder'
 
 export default function CharacterPage(props) {
@@ -27,15 +27,15 @@ export default function CharacterPage(props) {
                 </p>
             </div>
             <div className="horizontal">
-                <CharacterCaptionItem title={"Пол"} text={"Мужской"} minWidth={163}/>
-                <CharacterCaptionItem title={"Расса"} text={"Человек"} minWidth={163}/>
+                <CaptionItem title={"Пол"} text={"Мужской"} minWidth={163}/>
+                <CaptionItem title={"Расса"} text={"Человек"} minWidth={163}/>
             </div>
-            <CharacterCaptionItem title={"Место рождения"} text={"Земля C-137"} minWidth={343}/>
-            <CharacterCaptionItem title={"Местоположение"} text={"Земля (Измерение подменны)"} minWidth={343}/>
+            <CaptionItem title={"Место рождения"} text={"Земля C-137"} minWidth={343}/>
+            <CaptionItem title={"Местоположение"} text={"Земля (Измерение подменны)"} minWidth={343}/>
         </div>
         <div className="episodes">
             <div className="section-title">
-                <p className="title">Эпизоды</p>
+                <p className="section-title">Эпизоды</p>
                 <p className="grey-text">Все эпизоды</p>
             </div>
             <EpisodeCardsHolder />
