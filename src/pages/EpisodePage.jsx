@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/EpisodePage.scss'
 import CaptionItem from '../components/CaptionItem';
 import CharacterCardsHolder from '../components/CharacterCardsHolder';
+
 export default function EpisodePage(props) {
     return (
         <div className={"episode-page"}>

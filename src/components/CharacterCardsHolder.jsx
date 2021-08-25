@@ -1,11 +1,13 @@
 import React from 'react';
-import CharacterCard from './CharacterCard'
+import CharacterCard from './CharacterCard';
+import { Link } from 'react-router-dom';
 
 export default function CharacterCardsHolder(props) {
     return <div className={`cards-holder ${props.view}`}>
-        <CharacterCard img="./assets/rick.jpg" status={true} name={"Рик Санчез"} caption={"Человек, Мужской"}/>
-        <CharacterCard img="./assets/rick.jpg" status={true} name={"Ник Санчез"} caption={"Человек, Мужской"}/>
-        <CharacterCard img="./assets/rick.jpg" status={true} name={"Фик Санчез"} caption={"Человек, Мужской"}/>
-        <CharacterCard img="./assets/rick.jpg" status={false} name={"Чик Санчез"} caption={"Человек, Мужской"}/>
+        {props.data.map((val) => {
+            return <Link to={`/characters/${val.id}`} key={val.id} style={{textDecoration: "none", color: "#000"}}>
+                <CharacterCard img={val.imageName} status={val.status === 0 ? true : false} name={val.fullName} caption={`${val.race}, ${val.gender === 0 ? 'мужской' : 'женский'}`}/>
+            </Link>
+        })}
     </div>
 }
