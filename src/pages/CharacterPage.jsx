@@ -20,6 +20,7 @@ export default function CharacterPage(props) {
         const ch = (await data.json()).data;
         setCharacter(ch);
         setEpisodes(ch.episodes);
+        console.log(ch.episodes);
     }
     return <div className={"character-page"}>
         <Link to={"/characters"}>

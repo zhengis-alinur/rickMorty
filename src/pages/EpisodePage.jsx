@@ -1,17 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/EpisodePage.scss'
 import CaptionItem from '../components/CaptionItem';
 import CharacterCardsHolder from '../components/CharacterCardsHolder';
+import { months } from '../utils';
+import { Link } from 'react-router-dom';
 
 export default function EpisodePage(props) {
+
+    const [episode, setEpisode] = useState({});
+    const [date, setDate] = useState(new Date());
+    const [characters, setCharacters] = useState([]);
+    const id = props.match.params.id;
+
+    useEffect(()=>{
+        fetchEpisode(id);
+    },[]);
+
+    const fetchEpisode = async(id) => {
+        const data = await fetch(`http://173.249.20.184:7001/api/Episodes/GetByID?Id=${id}`);
+        const episode = (await data.json()).data;
+        setEpisode(episode);
+        setCharacters(episode.characters);
+        setDate(new Date(episode.premiere));
+    }
+
     return (
         <div className={"episode-page"}>
-            <svg className={"back-arr"} width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 6H15" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M6 1L1 6" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M6 11L1 6" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            <div className="bg-avatar" style={{backgroundImage: `url(./assets/episode.png)`}}>
+            <Link to={"/episodes"}>
+                <svg className={"back-arr"} width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 6H15" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M6 1L1 6" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M6 11L1 6" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+            </Link>
+            <div className="bg-avatar" style={{backgroundImage: `url(${episode.imageName})`}}>
             </div>
             <div className="about-wrapper">
                 <div className="about">
@@ -32,14 +54,14 @@ export default function EpisodePage(props) {
                             </filter>
                         </defs>
                     </svg>
-                    <p className="big-title">М. Найт Шьямал-Инопланетяне!</p>
-                    <p className="blue-text">серия 1</p>
+                    <p className="big-title">{episode.name}</p>
+                    <p className="blue-text">серия {episode.series}</p>
                     <div className="caption">
-                        <p>Зигерионцы помещают Джерри и Рика в симуляцию, чтобы узнать секрет изготовления концен-трирован- ной темной материи.</p>
-                        <CaptionItem title={"Премьера"} text={"2 декабря 2013"} />
+                        <p>{episode.plot}</p>
+                        <CaptionItem title={"Премьера"} text={`${date.getDate()} ${months.[date.getMonth()]} ${date.getFullYear()}`} />
                     </div>
                     <p className="section-title">Персонажи</p>
-                    <CharacterCardsHolder view={'list'} />
+                    <CharacterCardsHolder data={characters} view={'list'} />
                 </div>
             </div>
         </div>
