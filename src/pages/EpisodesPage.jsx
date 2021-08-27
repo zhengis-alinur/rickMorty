@@ -3,8 +3,9 @@ import SearchBar from '../components/SearchBar';
 import EpisodeCardsHolder from '../components/EpisodeCardsHolder';
 import BottomBar from '../components/BottomBar';
 import '../styles/EpisodesPage.scss';
+import { withRouter } from 'react-router-dom';
 
-export default function EpisodesPage(props) {
+function EpisodesPage(props) {
     const seasons = ['1', '2', '3', '4', '5', '6', '7'];
     const [episodes, setEpisodes] = useState([]);
     const [totalRecords, setTotalRecords] = useState(0);
@@ -16,19 +17,23 @@ export default function EpisodesPage(props) {
     const fetchEpisodes = async (page, size) => {
         const data = await fetch(`http://173.249.20.184:7001/api/Episodes/GetAll?PageNumber=${page}&PageSize=${size}`);
         const episodes = await data.json();
-        console.log(episodes);
         setEpisodes(episodes.data)
         setTotalRecords(episodes.totalRecords);
     }
 
-    return <div className={"page"}>
-        <SearchBar placeholder={"Найти эпизод"} filter={false}/>
-        <div className="slider">
-            {seasons.map((val) => {
-                return <p className={"grey-text uppercase active"} key={val}>сезон {val}</p>
-            })}
-        </div>
-        <EpisodeCardsHolder data={episodes}/>
-        <BottomBar />
-    </div>
+    return (
+        <>
+            <div className={"page"}>
+                <SearchBar placeholder={"Найти эпизод"} filter={false}/>
+                <div className="slider">
+                    {seasons.map((val) => {
+                        return <p className={"grey-text uppercase active"} key={val}>сезон {val}</p>
+                    })}
+                </div>
+                <EpisodeCardsHolder data={episodes}/>
+            </div>
+            <BottomBar />
+        </>
+    )
 }
+export default withRouter(EpisodesPage);

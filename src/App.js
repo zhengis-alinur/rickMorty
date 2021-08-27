@@ -1,27 +1,45 @@
 import './App.scss';
+import { useState } from 'react';
 import EpisodePage from './pages/EpisodePage';
 import CharactersPage from './pages/CharactersPage';
 import CharacterPage from './pages/CharacterPage';
 import EpisodesPage from './pages/EpisodesPage';
 import LocationsPage from './pages/LocationsPage';
 import LocationPage from './pages/LocationPage';
+import EnterPage from './pages/EnterPage';
+import SettingsPage from './pages/SettingsPage';
+import EditProfilePage from './pages/EditProfilePage';
+import RegistrationPage from './pages/RegistrationPage';
 import BottomBar from '../src/components/BottomBar';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
-function App() {
+import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
+import ProtectedRoute from './routes/ProtectedRoute';
+
+import appStore from './store/AppStore';
+import { observer } from 'mobx-react-lite';
+
+const App = observer(props => {
   return (
-     <Router>
+     <Router >
          <div className="App">
-             <Route path={"/characters"} exact component={CharactersPage}/>
-             <Route path={"/characters/:id"} component={CharacterPage}/>
-             <Route path={"/locations"} exact component={LocationsPage}/>
-             <Route path={"/locations/:id"} component={LocationPage}/>
-             <Route path={"/episodes"} exact component={EpisodesPage}/>
-             <Route path={"/episodes/:id"} component={EpisodePage}/>
-             <BottomBar />
+             <Switch>
+                 <Route exact path="/">
+                     {appStore.isAuth === true ? <Redirect to="/characters" /> : <Redirect to="/login" />}
+                 </Route>
+                 <Route path={"/login"} exact component={() => <EnterPage appStore={appStore}/>} ></Route>
+                 <Route path={"/registration"} component={RegistrationPage} isAuth={appStore.isAuth} />
+                 <ProtectedRoute path={"/characters"} exact component={CharactersPage} isAuth={appStore.isAuth}/>
+                 <ProtectedRoute path={"/characters/:id"} component={CharacterPage} isAuth={appStore.isAuth} />
+                 <ProtectedRoute path={"/locations"} exact component={LocationsPage} isAuth={appStore.isAuth} />
+                 <ProtectedRoute path={"/locations/:id"} component={LocationPage} isAuth={appStore.isAuth} />
+                 <ProtectedRoute path={"/episodes"} exact component={EpisodesPage} isAuth={appStore.isAuth} />
+                 <ProtectedRoute path={"/episodes/:id"} component={EpisodePage} isAuth={appStore.isAuth} />
+                 <ProtectedRoute path={"/settings"} component={() => <SettingsPage appStore={appStore}/>} isAuth={appStore.isAuth} />
+                 <ProtectedRoute path={"/editProfile"} component={() => <EditProfilePage appStore={appStore}/>} isAuth={appStore.isAuth} />
+             </Switch>
          </div>
      </Router>
   );
-}
+})
 
 export default App;

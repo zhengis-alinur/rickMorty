@@ -50,6 +50,13 @@
   color: $blue;
 }
 
+.blue-text-thin {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  color: $blue;
+}
+
 .grey-text {
   font-size: 12px;
   line-height: 16px;
@@ -66,6 +73,12 @@
   color: $light-green;
 }
 
+.green-link {
+  text-decoration: none;
+  margin-left: 10px;
+  color: $light-green;
+}
+
 .red-text {
   font-weight: 500;
   font-size: 10px;
@@ -73,4 +86,19 @@
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: $red;
+}
+
+.error-msg {
+  color: $red;
+}
+
+.page-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.small-title {
+  font-size: 16px;
+  line-height: 24px;
 }

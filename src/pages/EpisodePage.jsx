@@ -3,9 +3,9 @@ import '../styles/EpisodePage.scss'
 import CaptionItem from '../components/CaptionItem';
 import CharacterCardsHolder from '../components/CharacterCardsHolder';
 import { months } from '../utils';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
-export default function EpisodePage(props) {
+function EpisodePage(props) {
 
     const [episode, setEpisode] = useState({});
     const [date, setDate] = useState(new Date());
@@ -67,3 +67,4 @@ export default function EpisodePage(props) {
         </div>
     )
 }
+export default withRouter(EpisodePage);

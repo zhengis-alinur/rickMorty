@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import '../styles/CharacterPage.scss';
 import CaptionItem from '../components/CaptionItem';
 import EpisodeCardsHolder from '../components/EpisodeCardsHolder';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
-export default function CharacterPage(props) {
+function CharacterPage(props) {
     const [character, setCharacter] = useState({});
     const [alive, setAlive] = useState(props.status);
     const [episodes, setEpisodes] = useState([]);
@@ -20,7 +20,6 @@ export default function CharacterPage(props) {
         const ch = (await data.json()).data;
         setCharacter(ch);
         setEpisodes(ch.episodes);
-        console.log(ch.episodes);
     }
     return <div className={"character-page"}>
         <Link to={"/characters"}>
@@ -63,3 +62,4 @@ export default function CharacterPage(props) {
         </div>
     </div>
 }
+export default withRouter(CharacterPage);

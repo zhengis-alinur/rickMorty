@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../styles/BottomBar.scss';
+import { observer } from 'mobx-react-lite';
+import { bottomBarIcons } from '../utils';
+import appStore from '../store/AppStore';
 
-export default function BottomBar(props) {
-
-    return <div className={"bottombar-item"}>
+const BottomBar = observer(props => {
+    return <div className={"bottombar-item"} onClick={() => {appStore.changePage(props.page)}}>
         <div className="bottombar-item">
-            {props.icon}
-            <p className={'grey-text'}>{props.name}</p>
+            {bottomBarIcons[props.page]}
+            <p className={appStore.page === props.page ? 'blue-text-thin' : 'grey-text'}>{props.name}</p>
         </div>
     </div>
-}
+})
+
+export default BottomBar;

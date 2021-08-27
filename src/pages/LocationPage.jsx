@@ -3,9 +3,9 @@ import '../styles/LocationPage.scss'
 import CaptionItem from '../components/CaptionItem';
 import CharacterCardsHolder from '../components/CharacterCardsHolder';
 import { months } from '../utils';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
-export default function LocationPage(props) {
+function LocationPage(props) {
 
     const [location, setLocation] = useState({});
     const [characters, setCharacters] = useState([]);
@@ -20,7 +20,6 @@ export default function LocationPage(props) {
         const location = (await data.json()).data;
         setLocation(location);
         setCharacters(location.characters);
-        console.log(location);
     }
 
     return (
@@ -48,3 +47,4 @@ export default function LocationPage(props) {
         </div>
     )
 }
+export default withRouter(LocationPage);
