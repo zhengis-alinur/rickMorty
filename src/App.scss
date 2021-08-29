@@ -16,7 +16,10 @@
 
 .horizontal {
   display: flex;
-  justify-content: space-between;
+}
+.vertical {
+  display: flex;
+  flex-direction: column;
 }
 
 .uppercase {
@@ -29,4 +32,11 @@
 .link {
   text-decoration: none;
   color: #000;
+}
+hr {
+  border: none;
+  background-color: $light-grey;
+  color: $light-grey;
+  height: 2px;
+  margin: 36px 0;
 }

@@ -1,5 +1,4 @@
 import appStore from './store/AppStore';
-
 export const months = {
     0: 'Января',
     1: 'Февраля',

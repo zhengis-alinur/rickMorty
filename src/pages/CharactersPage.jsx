@@ -2,16 +2,21 @@ import React, { useState, useEffect } from 'react';
 import SearchBar from '../components/SearchBar';
 import CharacterCardsHolder from '../components/CharacterCardsHolder';
 import BottomBar from '../components/BottomBar';
+import CharacterFilter from '../components/CharacterFilter';
 import { withRouter } from 'react-router-dom';
 
 function CharactersPage(props) {
+    const [characters, setCharacters] = useState([]);
+    const [totalRecords, setTotalRecords] = useState(0);
+    const [orderASC, setOrder] = useState(true);
+    const [gender, setGender] = useState(-1);
+    const [alive, setAlive] = useState(true);
+    const [view, setView] = useState('map');
+    const [filter, setFilter] = useState(false);
+
     useEffect(() => {
         fetchCharacters(1, 43);
     }, []);
-
-    const [characters, setCharacters] = useState([]);
-    const [totalRecords, setTotalRecords] = useState(0);
-    const [view, setView] = useState('map');
 
     const toggleView = () => {
         view === 'map' ? setView('list') : setView('map');
@@ -23,10 +28,21 @@ function CharactersPage(props) {
         setCharacters(characters.data);
         setTotalRecords(characters.totalRecords);
     }
+
+    const toggleFilter = () => {
+        if (filter === true) {
+            setFilter(false);
+            document.querySelector("body").style.overflow = "visible";
+        } else {
+            setFilter(true);
+            document.querySelector("body").style.overflow = "hidden";
+        }
+    }
     return (
     <>
+        <CharacterFilter onBackArrClick={toggleFilter} visible={filter}/>
         <div className={"page"}>
-            <SearchBar placeholder={"Найти персонажа"} filter={true}/>
+            <SearchBar placeholder={"Найти персонажа"} filter={true} onFilterClick={toggleFilter}/>
             <div className="caption">
                 <p className={"grey-caption"}>{`Всего персонажей: ${totalRecords}`}</p>
                 <div className="view-toggle-btn" onClick={toggleView}>

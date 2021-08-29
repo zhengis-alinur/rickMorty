@@ -4,6 +4,7 @@ import InputText from "../components/InputText";
 import PrimaryBtn from "../components/PrimaryBtn";
 import { Link, useHistory } from 'react-router-dom';
 import Message from "../components/Message";
+import { login } from "../API/AuthAPI";
 
 
 function EnterPage(props) {
@@ -26,26 +27,23 @@ function EnterPage(props) {
     }
     const loginHadle = async () => {
         const data = {userName, password}
-        const request = await fetch('http://173.249.20.184:7001/api/Account/Login', {
-            method: 'POST',
-            mode: 'cors',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
-        if (request.status !== 200) {
-            setResponseText("Введены неверныe логин или пароль");
-            showMessage();
-        } else {
-            const response = await request.json();
-            appStore.token = response.data.token;
-            appStore.isAuth = true;
-            if(appStore.isAuth == true) {
+        login(data).then(async (request) => {
+            if (request.status !== 200) {
+                setResponseText("Введены неверныe логин или пароль");
+                showMessage();
+            } else {
+                const response = await request.json();
+                const { token, refreshToken }= response.data;
+                localStorage.setItem("isAuth", true);
+                localStorage.setItem("userName", userName);
+                localStorage.setItem("token", token);
+                appStore.setToken(token);
+                appStore.setAuth(true)
                 appStore.setUserName(userName);
                 redirect();
             }
-        }
+        });
+
     }
 
     const userNameChangeHandler = (event) => {setUserName(event.target.value)}

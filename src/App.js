@@ -10,6 +10,7 @@ import EnterPage from './pages/EnterPage';
 import SettingsPage from './pages/SettingsPage';
 import EditProfilePage from './pages/EditProfilePage';
 import RegistrationPage from './pages/RegistrationPage';
+import EditNamePage from './pages/EditNamePage';
 import BottomBar from '../src/components/BottomBar';
 
 import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
@@ -36,6 +37,7 @@ const App = observer(props => {
                  <ProtectedRoute path={"/episodes/:id"} component={EpisodePage} isAuth={appStore.isAuth} />
                  <ProtectedRoute path={"/settings"} component={() => <SettingsPage appStore={appStore}/>} isAuth={appStore.isAuth} />
                  <ProtectedRoute path={"/editProfile"} component={() => <EditProfilePage appStore={appStore}/>} isAuth={appStore.isAuth} />
+                 <ProtectedRoute path={"/editName"} component={() => <EditNamePage appStore={appStore}/>} isAuth={appStore.isAuth} />
              </Switch>
          </div>
      </Router>

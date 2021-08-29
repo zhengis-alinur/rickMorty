@@ -6,6 +6,9 @@ class AppStore {
     userName = '';
     token = '';
     constructor() {
+        localStorage.getItem("isAuth") ? this.isAuth = true : this.isAuth = false;
+        localStorage.getItem("userName") ? this.userName = localStorage.getItem("userName") : this.userName = '';
+        localStorage.getItem("token") ? this.token = localStorage.getItem("token") : this.token = '';
         makeObservable(this, {
             page: observable,
             userName: observable,
