@@ -4,7 +4,7 @@ import InputText from "../components/InputText";
 import PrimaryBtn from "../components/PrimaryBtn";
 import { Link, useHistory } from 'react-router-dom';
 import Message from "../components/Message";
-import { login } from "../API/AuthAPI";
+import { login } from "../API/api";
 
 
 function EnterPage(props) {
@@ -34,9 +34,9 @@ function EnterPage(props) {
             } else {
                 const response = await request.json();
                 const { token, refreshToken }= response.data;
-                localStorage.setItem("isAuth", true);
-                localStorage.setItem("userName", userName);
-                localStorage.setItem("token", token);
+                sessionStorage.setItem("isAuth", true);
+                sessionStorage.setItem("userName", userName);
+                sessionStorage.setItem("token", token);
                 appStore.setToken(token);
                 appStore.setAuth(true)
                 appStore.setUserName(userName);

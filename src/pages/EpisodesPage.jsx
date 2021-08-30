@@ -1,24 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import SearchBar from '../components/SearchBar';
 import EpisodeCardsHolder from '../components/EpisodeCardsHolder';
 import BottomBar from '../components/BottomBar';
 import '../styles/EpisodesPage.scss';
 import { withRouter } from 'react-router-dom';
+import { fetchEpisodes } from '../API/api';
+import PageContext from '../contexts/PageContext';
 
 function EpisodesPage(props) {
+    const {page, setPage} = useContext(PageContext);
+
     const seasons = ['1', '2', '3', '4', '5', '6', '7'];
     const [episodes, setEpisodes] = useState([]);
     const [totalRecords, setTotalRecords] = useState(0);
 
     useEffect(()=>{
-        fetchEpisodes(1,41);
+        setPage("episodes");
+        getEpisodes();
     }, []);
 
-    const fetchEpisodes = async (page, size) => {
-        const data = await fetch(`http://173.249.20.184:7001/api/Episodes/GetAll?PageNumber=${page}&PageSize=${size}`);
-        const episodes = await data.json();
-        setEpisodes(episodes.data)
-        setTotalRecords(episodes.totalRecords);
+    const getEpisodes = async () => {
+        fetchEpisodes(1, 11).then(async (request) => {
+            const episodes = await request.json();
+            setEpisodes(episodes.data)
+            setTotalRecords(episodes.totalRecords);
+        });
     }
 
     return (
@@ -32,7 +38,7 @@ function EpisodesPage(props) {
                 </div>
                 <EpisodeCardsHolder data={episodes}/>
             </div>
-            <BottomBar />
+            <BottomBar/>
         </>
     )
 }

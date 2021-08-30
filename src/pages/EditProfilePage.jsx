@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import '../styles/EditProfilePage.scss';
 import DefaultBtn from '../components/DefaultBtn';
 import { Link, useHistory } from 'react-router-dom';
+import { getProfile } from "../API/api";
 
 function EditProfilePage(props) {
     const [name, setName] = useState("");
@@ -10,17 +11,17 @@ function EditProfilePage(props) {
     const history = useHistory();
 
     useEffect(() => {
-        getProfile();
+        getProfileInfo();
     }, []);
-    const getProfile = async () => {
-        const request = await fetch(`http://173.249.20.184:7001/api/Account/GetProfile?userName=${props.appStore.userName}`)
-        const response = await request.json();
-        setName(response.data.fullName);
-        props.appStore.setId = response.data.id;
-        if (response.data.avatar !== null) {
-            setImage(response.data.avatar);
-        }
-        console.log(response);
+    const getProfileInfo = async () => {
+        getProfile(props.appStore.userName).then(async (request) => {
+            const response = await request.json()
+            setName(response.data.fullName);
+            props.appStore.setId = response.data.id;
+            if (response.data.avatar !== null) {
+                setImage(response.data.avatar);
+            }
+        });
     }
 
     return (

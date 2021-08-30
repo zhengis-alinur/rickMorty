@@ -1,25 +1,18 @@
 import { observable, action, makeObservable } from 'mobx';
 
 class AppStore {
-    page = '';
     isAuth = false;
     userName = '';
     token = '';
     constructor() {
-        localStorage.getItem("isAuth") ? this.isAuth = true : this.isAuth = false;
-        localStorage.getItem("userName") ? this.userName = localStorage.getItem("userName") : this.userName = '';
-        localStorage.getItem("token") ? this.token = localStorage.getItem("token") : this.token = '';
+        sessionStorage.getItem("isAuth") ? this.isAuth = true : this.isAuth = false;
+        sessionStorage.getItem("userName") ? this.userName = sessionStorage.getItem("userName") : this.userName = '';
+        sessionStorage.getItem("token") ? this.token = sessionStorage.getItem("token") : this.token = '';
         makeObservable(this, {
-            page: observable,
             userName: observable,
             token: observable,
             isAuth: observable,
-            changePage: action
         });
-    }
-    changePage(value) {
-        this.page = value;
-        console.log(this.page);
     }
     setAuth(value) {
         this.isAuth = value;

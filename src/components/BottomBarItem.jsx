@@ -1,14 +1,13 @@
-import React, {useState} from 'react';
+import React, { useState, useContext } from 'react';
 import '../styles/BottomBar.scss';
 import { observer } from 'mobx-react-lite';
 import { bottomBarIcons } from '../utils';
-import appStore from '../store/AppStore';
 
 const BottomBar = observer(props => {
-    return <div className={"bottombar-item"} onClick={() => {appStore.changePage(props.page)}}>
+    return <div className={"bottombar-item"}>
         <div className="bottombar-item">
-            {bottomBarIcons[props.page]}
-            <p className={appStore.page === props.page ? 'blue-text-thin' : 'grey-text'}>{props.name}</p>
+            {bottomBarIcons[`${props.page}${props.isCurrent === true ? '-current' : ''}`]}
+            <p className={props.isCurrent === true ? 'blue-text-thin' : 'grey-text'}>{props.name}</p>
         </div>
     </div>
 })

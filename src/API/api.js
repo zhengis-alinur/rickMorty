@@ -1,4 +1,4 @@
-export const getProfile = async (userName) => await fetch(`http://173.249.20.184:7001/api/Account/GetProfile?userName=${userName}`)
+export const getProfile = async (userName) => await fetch(`http://173.249.20.184:7001/api/Account/GetProfile?userName=${userName}`);
 export const updateProfile = async (data) => {
     const request = await fetch('http://173.249.20.184:7001/api/Account/UpdateProfile', {
         method: 'PUT',
@@ -6,7 +6,7 @@ export const updateProfile = async (data) => {
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
-            'Authorization': `Bearer ${localStorage.getItem("token")}`
+            'Authorization': `Bearer ${sessionStorage.getItem("token")}`
         },
         body: JSON.stringify(data)
     });
@@ -19,7 +19,6 @@ export const createProfile = async (data) => {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
-                'Authorization': `Bearer ${localStorage.getItem("token")}`
             },
             body: JSON.stringify(data)
         });
@@ -36,3 +35,7 @@ export const login = async (data) => {
     });
     return request;
 }
+
+export const fetchCharacters = async (page, size) => await fetch(`http://173.249.20.184:7001/api/Characters/GetAll?PageNumber=${page}&PageSize=${size}`);
+export const fetchLocations = async (page, size) => await fetch(`http://173.249.20.184:7001/api/Locations/GetAll?PageNumber=${page}&PageSize=${size}`);
+export const fetchEpisodes = async (page, size) => await fetch(`http://173.249.20.184:7001/api/Episodes/GetAll?PageNumber=${page}&PageSize=${size}`);

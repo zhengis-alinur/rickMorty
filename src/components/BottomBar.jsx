@@ -1,24 +1,27 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import '../styles/BottomBar.scss';
 import BottomBarItem from '../components/BottomBarItem';
 import { Link } from 'react-router-dom';
-
+import PageContext from '../contexts/PageContext';
 
 const BottomBar = (props => {
     const navStyle = {textDecoration: "none"};
+    const {page, setPage} = useContext(PageContext);
+    const items = {
+        characters: "Персонажи",
+        locations: "Локации",
+        episodes: "Эпизоды",
+        settings: "Настройки",
+    };
+
     return <div className={"bottombar"}>
-        <Link to={"/characters"} style={navStyle} >
-            <BottomBarItem name={"Персонажи"} page={'characters'}/>
-        </Link>
-        <Link to={"/locations"} style={navStyle} >
-            <BottomBarItem name={"Локации"} page={'locations'}/>
-        </Link>
-        <Link to={"/episodes"} style={navStyle} >
-            <BottomBarItem name={"Эпизоды"} page={'episodes'}/>
-        </Link>
-        <Link to={"/settings"} style={navStyle} >
-            <BottomBarItem name={"Настройки"} page={'settings'}/>
-        </Link>
+        {
+            Object.keys(items).map((val) => {
+                return <Link to={`/${val}`} style={navStyle} key={val}>
+                    <BottomBarItem name={items[val]} page={val} isCurrent={val === page}/>
+                </Link>
+            })
+        }
     </div>
 });
 export default BottomBar;

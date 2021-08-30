@@ -1,26 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useContext } from 'react';
 import { withRouter, useHistory } from 'react-router-dom';
 import '../styles/SettingsPage.scss';
 import DefaultBtn from '../components/DefaultBtn';
 import { Link } from 'react-router-dom';
+import { getProfile } from '../API/api';
+import BottomBar from '../components/BottomBar';
+import PageContext from '../contexts/PageContext';
 
 function SettingsPage(props) {
+    const {page, setPage} = useContext(PageContext);
+
     const [name, setName] = useState("");
     const [image, setImage] = useState(null);
     const history = useHistory();
 
     useEffect(() => {
+        setPage("settings");
         getName();
     }, []);
 
     const getName = async () => {
-        const request = await fetch(`http://173.249.20.184:7001/api/Account/GetProfile?userName=${props.appStore.userName}`)
-        const response = await request.json();
-        setName(response.data.fullName);
-        if (response.data.avatar !== null) {
-            setImage(response.data.avatar);
-        }
-        console.log(response);
+        getProfile(props.appStore.userName).then(async (request) => {
+            const response = await request.json();
+            setName(response.data.fullName);
+            if (response.data.avatar !== null) {
+                setImage(response.data.avatar);
+            }
+        });
     }
 
     const redirect = () => {
@@ -78,7 +84,7 @@ function SettingsPage(props) {
                 <p className={"grey-text"}>Версия приложения</p>
                 <p>Rick & Morty  v1.0.0</p>
             </div>
-
+            <BottomBar/>
         </div>
     )
 };

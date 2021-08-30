@@ -1,12 +1,16 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, { useState, useEffect, useMemo, useCallback, useContext } from 'react';
 import SearchBar from '../components/SearchBar';
 import CharacterCardsHolder from '../components/CharacterCardsHolder';
 import BottomBar from '../components/BottomBar';
 import CharacterFilter from '../components/CharacterFilter';
 import { withRouter } from 'react-router-dom';
 import FilterContext from '../contexts/FilterContext';
+import { fetchCharacters } from '../API/api';
+import PageContext from '../contexts/PageContext';
 
 function CharactersPage(props) {
+    const {page, setPage} = useContext(PageContext);
+
     const [characters, setCharacters] = useState([]);
     const [totalRecords, setTotalRecords] = useState(0);
 
@@ -17,17 +21,20 @@ function CharactersPage(props) {
     const [view, setView] = useState('map');
     const [filterVisible, setFilterVisible] = useState(false);
 
-    useEffect(() => {
-        fetchCharacters(1, 43);
+    useEffect(() => {setPage('characters')}, []);
+
+    useEffect(async () => {
+        getCharacters();
     }, [gender, alive]);
 
-    const fetchCharacters = async (page, size) => {
-        const data = await fetch(`http://173.249.20.184:7001/api/Characters/GetAll?PageNumber=${page}&PageSize=${size}`);
-        const characters = await data.json();
-        let filtredCharacters = gender === -1 ? characters.data : characters.data.filter((val) => val.gender === gender);
-        filtredCharacters = alive === -1 ? filtredCharacters : filtredCharacters.filter((val) => val.status === alive);
-        setCharacters(filtredCharacters);
-        setTotalRecords(filtredCharacters.length);
+    const getCharacters = async () => {
+        fetchCharacters(1, 43).then(async (request) => {
+            const characters = await request.json();
+            let filtredCharacters = gender === -1 ? characters.data : characters.data.filter((val) => val.gender === gender);
+            filtredCharacters = alive === -1 ? filtredCharacters : filtredCharacters.filter((val) => val.status === alive);
+            setCharacters(filtredCharacters);
+            setTotalRecords(filtredCharacters.length);
+        });
     }
 
     const toggleView = () => {

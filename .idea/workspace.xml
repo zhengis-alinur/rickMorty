@@ -2,10 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd75333b-88ab-47a0-8110-794590df1a41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/contexts/FilterContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/contexts/PageContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CharacterFilter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CharacterFilter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/earth.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/episode.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/rick.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/rick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/AuthAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BottomBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BottomBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BottomBarItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BottomBarItem.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/CharactersPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CharactersPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EditNamePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditNamePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EditProfilePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditProfilePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EnterPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EnterPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EpisodesPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EpisodesPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LocationsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LocationsPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/RegistrationPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RegistrationPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SettingsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SettingsPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/AppStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/AppStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +72,7 @@
       <recent name="D:\Data\Coding\Front-End\SimpleCode\my-app\src\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Data\Coding\Front-End\SimpleCode\my-app\public" />
       <recent name="D:\Data\Coding\Front-End\SimpleCode\my-app\src\API" />
       <recent name="D:\Data\Coding\Front-End\SimpleCode\my-app\src\components" />
       <recent name="D:\Data\Coding\Front-End\SimpleCode\my-app\src\Variables" />
@@ -100,7 +119,10 @@
       <workItem from="1630172973385" duration="614000" />
       <workItem from="1630227961778" duration="12057000" />
       <workItem from="1630256404300" duration="1878000" />
-      <workItem from="1630305881895" duration="6734000" />
+      <workItem from="1630305881895" duration="6766000" />
+      <workItem from="1630312943115" duration="492000" />
+      <workItem from="1630321235494" duration="5852000" />
+      <workItem from="1630327361940" duration="4533000" />
     </task>
     <servers />
   </component>

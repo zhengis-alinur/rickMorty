@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import InputText from "../components/InputText";
 import PrimaryBtn from "../components/PrimaryBtn";
 import Message from "../components/Message";
-import { createProfile } from "../API/AuthAPI";
+import { createProfile } from "../API/api";
 import '../styles/RegistrationPage.scss';
 
 function RegistrationPage(props) {

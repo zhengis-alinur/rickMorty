@@ -5,9 +5,9 @@ import InputText from "../components/InputText";
 import PrimaryBtn from "../components/PrimaryBtn";
 import Message from "../components/Message";
 import '../styles/RegistrationPage.scss';
-import { updateProfile, getProfile } from "../API/AuthAPI";
+import { updateProfile, getProfile } from "../API/api";
 
-function RegistrationPage(props) {
+function EditNamePage(props) {
     const [formIsValid, setFormIsValid] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -128,4 +128,4 @@ function RegistrationPage(props) {
     );
 }
 
-export default RegistrationPage;
+export default EditNamePage;
