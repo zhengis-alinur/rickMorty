@@ -1,7 +1,44 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/CharacterFilter.scss';
+import FilterContext from '../contexts/FilterContext';
+
 function CharacterFilter(props) {
+    const {gender, setGender} = useContext(FilterContext);
+    const {alive, setAlive} = useContext(FilterContext);
+
+    const changeGender = (event) => {
+        if(event.target.checked ===  true) {
+            if(event.target.id === 'male') {
+                setGender(0);
+            }
+            if (event.target.id === 'female') {
+                setGender(1);
+            }
+            if (event.target.id === 'none-gender') {
+                setGender(2);
+            }
+        } else {
+            setGender(-1);
+        }
+    };
+
+    const changeStatus = (event) => {
+        if(event.target.checked ===  true) {
+            if(event.target.id === 'alive') {
+                setAlive(0);
+            }
+            if (event.target.id === 'dead') {
+                setAlive(1);
+            }
+            if (event.target.id === 'unknown-alive') {
+                setAlive(2);
+            }
+        } else {
+            setAlive(-1);
+        }
+    };
+
     return (
         <div className={"character-filter"} style={{visibility: props.visible === true ? "visible" : "hidden"}}>
             <div className="header">
@@ -37,15 +74,15 @@ function CharacterFilter(props) {
                 <p className="status">Статус</p>
                 <div className="vertical">
                     <div className="check small-title">
-                        <input type={"checkbox"} id={"alive"}></input>
+                        <input type={"checkbox"} id={"alive"} onChange={changeStatus}></input>
                         <label htmlFor={"alive"}>Живой</label>
                     </div>
                     <div className="check small-title">
-                        <input type={"checkbox"} id={"dead"}></input>
+                        <input type={"checkbox"} id={"dead"} onChange={changeStatus}></input>
                         <label htmlFor={"dead"}>Мертвый</label>
                     </div>
                     <div className="check small-title">
-                        <input type={"checkbox"} id={"unknown-alive"}></input>
+                        <input type={"checkbox"} id={"unknown-alive"} onChange={changeStatus}></input>
                         <label htmlFor={"unknown-alive"}>Неизвестно</label>
                     </div>
                 </div>
@@ -55,15 +92,15 @@ function CharacterFilter(props) {
                 <p className="status">Статус</p>
                 <div className="vertical">
                     <div className="check small-title">
-                        <input type={"checkbox"} id={"male"}></input>
+                        <input type={"checkbox"} id={"male"} onChange={changeGender}></input>
                         <label htmlFor={"male"}>Мужчина</label>
                     </div>
                     <div className="check small-title">
-                        <input type={"checkbox"} id={"female"}></input>
+                        <input type={"checkbox"} id={"female"} onChange={changeGender}></input>
                         <label htmlFor={"female"}>Женщина</label>
                     </div>
                     <div className="check small-title">
-                        <input type={"checkbox"} id={"none-gender"}></input>
+                        <input type={"checkbox"} id={"none-gender"} onChange={changeGender}></input>
                         <label htmlFor={"none-gender"}>Бесполый</label>
                     </div>
                 </div>

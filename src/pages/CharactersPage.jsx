@@ -1,46 +1,54 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import SearchBar from '../components/SearchBar';
 import CharacterCardsHolder from '../components/CharacterCardsHolder';
 import BottomBar from '../components/BottomBar';
 import CharacterFilter from '../components/CharacterFilter';
 import { withRouter } from 'react-router-dom';
+import FilterContext from '../contexts/FilterContext';
 
 function CharactersPage(props) {
     const [characters, setCharacters] = useState([]);
     const [totalRecords, setTotalRecords] = useState(0);
+
     const [orderASC, setOrder] = useState(true);
     const [gender, setGender] = useState(-1);
-    const [alive, setAlive] = useState(true);
+    const [alive, setAlive] = useState(-1);
+
     const [view, setView] = useState('map');
-    const [filter, setFilter] = useState(false);
+    const [filterVisible, setFilterVisible] = useState(false);
 
     useEffect(() => {
         fetchCharacters(1, 43);
-    }, []);
+    }, [gender, alive]);
+
+    const fetchCharacters = async (page, size) => {
+        const data = await fetch(`http://173.249.20.184:7001/api/Characters/GetAll?PageNumber=${page}&PageSize=${size}`);
+        const characters = await data.json();
+        let filtredCharacters = gender === -1 ? characters.data : characters.data.filter((val) => val.gender === gender);
+        filtredCharacters = alive === -1 ? filtredCharacters : filtredCharacters.filter((val) => val.status === alive);
+        setCharacters(filtredCharacters);
+        setTotalRecords(filtredCharacters.length);
+    }
 
     const toggleView = () => {
         view === 'map' ? setView('list') : setView('map');
     }
 
-    const fetchCharacters = async (page, size) => {
-        const data = await fetch(`http://173.249.20.184:7001/api/Characters/GetAll?PageNumber=${page}&PageSize=${size}`);
-        const characters = await data.json();
-        setCharacters(characters.data);
-        setTotalRecords(characters.totalRecords);
-    }
-
     const toggleFilter = () => {
-        if (filter === true) {
-            setFilter(false);
+        if (filterVisible === true) {
+            setFilterVisible(false);
             document.querySelector("body").style.overflow = "visible";
         } else {
-            setFilter(true);
+            setFilterVisible(true);
             document.querySelector("body").style.overflow = "hidden";
         }
     }
+
     return (
     <>
-        <CharacterFilter onBackArrClick={toggleFilter} visible={filter}/>
+        <FilterContext.Provider value={{gender, setGender, alive, setAlive}}>
+            <CharacterFilter onBackArrClick={toggleFilter} visible={filterVisible}/>
+        </FilterContext.Provider>
         <div className={"page"}>
             <SearchBar placeholder={"Найти персонажа"} filter={true} onFilterClick={toggleFilter}/>
             <div className="caption">

@@ -2,26 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd75333b-88ab-47a0-8110-794590df1a41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/API/AuthAPI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CharacterFilter.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/EditNamePage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/CharacterFilter.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/contexts/FilterContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CharacterFilter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CharacterFilter.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/CharactersPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CharactersPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/EditProfilePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditProfilePage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/EnterPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EnterPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/RegistrationPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RegistrationPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SettingsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SettingsPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/AppStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/AppStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/RegistrationPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/RegistrationPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/SettingsPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/SettingsPage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/fonts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +99,8 @@
       <workItem from="1630042742331" duration="34506000" />
       <workItem from="1630172973385" duration="614000" />
       <workItem from="1630227961778" duration="12057000" />
-      <workItem from="1630256404300" duration="1804000" />
+      <workItem from="1630256404300" duration="1878000" />
+      <workItem from="1630305881895" duration="6734000" />
     </task>
     <servers />
   </component>
