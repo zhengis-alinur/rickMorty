@@ -14,7 +14,7 @@ function LocationPage(props) {
     },[]);
 
     const fetchLocation = async(id) => {
-        const data = await fetch(`http://173.249.20.184:7001/api/Locations/GetByID?Id=${id}`);
+        const data = await fetch(`https://173.249.20.184:7001/api/Locations/GetByID?Id=${id}`);
         const location = (await data.json()).data;
         setLocation(location);
         setCharacters(location.characters);

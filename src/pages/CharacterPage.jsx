@@ -14,7 +14,7 @@ function CharacterPage(props) {
     },[]);
 
     const fetchCharacter = async(id) => {
-        const data = await fetch(`http://173.249.20.184:7001/api/Characters/GetByID?Id=${id}`);
+        const data = await fetch(`https://173.249.20.184:7001/api/Characters/GetByID?Id=${id}`);
         const ch = (await data.json()).data;
         setCharacter(ch);
         setEpisodes(ch.episodes);

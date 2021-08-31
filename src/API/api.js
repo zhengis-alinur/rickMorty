@@ -1,6 +1,6 @@
-export const getProfile = async (userName) => await fetch(`http://173.249.20.184:7001/api/Account/GetProfile?userName=${userName}`);
+export const getProfile = async (userName) => await fetch(`https://173.249.20.184:7001/api/Account/GetProfile?userName=${userName}`);
 export const updateProfile = async (data) => {
-    const request = await fetch('http://173.249.20.184:7001/api/Account/UpdateProfile', {
+    const request = await fetch('https://173.249.20.184:7001/api/Account/UpdateProfile', {
         method: 'PUT',
         mode: 'cors',
         headers: {
@@ -13,7 +13,7 @@ export const updateProfile = async (data) => {
     return request;
 }
 export const createProfile = async (data) => {
-        const request = await fetch('http://173.249.20.184:7001/api/Account/Register', {
+        const request = await fetch('https://173.249.20.184:7001/api/Account/Register', {
             method: 'POST',
             mode: 'cors',
             headers: {
@@ -25,7 +25,7 @@ export const createProfile = async (data) => {
         return request;
 }
 export const login = async (data) => {
-    const request = await fetch('http://173.249.20.184:7001/api/Account/Login', {
+    const request = await fetch('https://173.249.20.184:7001/api/Account/Login', {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -36,6 +36,6 @@ export const login = async (data) => {
     return request;
 }
 
-export const fetchCharacters = async (page, size) => await fetch(`http://173.249.20.184:7001/api/Characters/GetAll?PageNumber=${page}&PageSize=${size}`);
-export const fetchLocations = async (page, size) => await fetch(`http://173.249.20.184:7001/api/Locations/GetAll?PageNumber=${page}&PageSize=${size}`);
-export const fetchEpisodes = async (page, size) => await fetch(`http://173.249.20.184:7001/api/Episodes/GetAll?PageNumber=${page}&PageSize=${size}`);
+export const fetchCharacters = async (page, size) => await fetch(`https://173.249.20.184:7001/api/Characters/GetAll?PageNumber=${page}&PageSize=${size}`);
+export const fetchLocations = async (page, size) => await fetch(`https://173.249.20.184:7001/api/Locations/GetAll?PageNumber=${page}&PageSize=${size}`);
+export const fetchEpisodes = async (page, size) => await fetch(`https://173.249.20.184:7001/api/Episodes/GetAll?PageNumber=${page}&PageSize=${size}`);
