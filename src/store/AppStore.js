@@ -12,6 +12,9 @@ class AppStore {
             userName: observable,
             token: observable,
             isAuth: observable,
+            setAuth: action,
+            setUserName: action,
+            setToken: action
         });
     }
     setAuth(value) {

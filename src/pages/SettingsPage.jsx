@@ -88,4 +88,4 @@ function SettingsPage(props) {
         </div>
     )
 };
-export default SettingsPage;
+export default withRouter(SettingsPage);

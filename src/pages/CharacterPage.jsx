@@ -6,9 +6,7 @@ import { Link, withRouter } from 'react-router-dom';
 
 function CharacterPage(props) {
     const [character, setCharacter] = useState({});
-    const [alive, setAlive] = useState(props.status);
     const [episodes, setEpisodes] = useState([]);
-    const [totalRecords, setTotalRecords] = useState(0);
     const id = props.match.params.id;
 
     useEffect(()=>{

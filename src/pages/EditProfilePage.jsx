@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import '../styles/EditProfilePage.scss';
-import DefaultBtn from '../components/DefaultBtn';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getProfile } from "../API/api";
 
 function EditProfilePage(props) {
     const [name, setName] = useState("");
     const [image, setImage] = useState(null);
-    const history = useHistory();
 
     useEffect(() => {
         getProfileInfo();
@@ -67,4 +65,4 @@ function EditProfilePage(props) {
         </div>
     )
 };
-export default EditProfilePage;
+export default withRouter(EditProfilePage);

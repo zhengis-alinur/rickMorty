@@ -11,7 +11,6 @@ import SettingsPage from './pages/SettingsPage';
 import EditProfilePage from './pages/EditProfilePage';
 import RegistrationPage from './pages/RegistrationPage';
 import EditNamePage from './pages/EditNamePage';
-import BottomBar from '../src/components/BottomBar';
 import PageContext from './contexts/PageContext';
 
 import {HashRouter  as Router, Switch, Route, Redirect} from 'react-router-dom';

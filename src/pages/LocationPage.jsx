@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/LocationPage.scss'
-import CaptionItem from '../components/CaptionItem';
 import CharacterCardsHolder from '../components/CharacterCardsHolder';
-import { months } from '../utils';
 import { Link, withRouter } from 'react-router-dom';
 
 function LocationPage(props) {

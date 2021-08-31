@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useCallback, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import SearchBar from '../components/SearchBar';
 import CharacterCardsHolder from '../components/CharacterCardsHolder';
 import BottomBar from '../components/BottomBar';
@@ -14,7 +14,6 @@ function CharactersPage(props) {
     const [characters, setCharacters] = useState([]);
     const [totalRecords, setTotalRecords] = useState(0);
 
-    const [orderASC, setOrder] = useState(true);
     const [gender, setGender] = useState(-1);
     const [alive, setAlive] = useState(-1);
 
@@ -24,7 +23,7 @@ function CharactersPage(props) {
     useEffect(() => {setPage('characters')}, []);
 
     useEffect(async () => {
-        getCharacters();
+        await getCharacters();
     }, [gender, alive]);
 
     const getCharacters = async () => {

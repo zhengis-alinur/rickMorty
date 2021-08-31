@@ -2,11 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd75333b-88ab-47a0-8110-794590df1a41" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebase.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BottomBarItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BottomBarItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CaptionItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CaptionItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CharacterCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CharacterCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CharacterFilter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CharacterFilter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EpisodeCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EpisodeCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LocationCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LocationCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CharacterPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CharacterPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CharactersPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CharactersPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EditNamePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditNamePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EditProfilePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EditProfilePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EnterPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EnterPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/EpisodesPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/EpisodesPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LocationPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LocationPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/RegistrationPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RegistrationPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/SettingsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SettingsPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/ProtectedRoute.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/ProtectedRoute.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/AppStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/AppStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -12,7 +12,6 @@ function EpisodesPage(props) {
 
     const seasons = ['1', '2', '3', '4', '5', '6', '7'];
     const [episodes, setEpisodes] = useState([]);
-    const [totalRecords, setTotalRecords] = useState(0);
 
     useEffect(()=>{
         setPage("episodes");
@@ -23,7 +22,6 @@ function EpisodesPage(props) {
         fetchEpisodes(1, 11).then(async (request) => {
             const episodes = await request.json();
             setEpisodes(episodes.data)
-            setTotalRecords(episodes.totalRecords);
         });
     }
 

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React from 'react';
 import '../styles/BottomBar.scss';
 import { observer } from 'mobx-react-lite';
 import { bottomBarIcons } from '../utils';

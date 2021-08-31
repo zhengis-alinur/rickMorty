@@ -33,7 +33,7 @@ function EnterPage(props) {
                 showMessage();
             } else {
                 const response = await request.json();
-                const { token, refreshToken }= response.data;
+                const { token }= response.data;
                 sessionStorage.setItem("isAuth", true);
                 sessionStorage.setItem("userName", userName);
                 sessionStorage.setItem("token", token);

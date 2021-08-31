@@ -6,7 +6,7 @@ export default function CharacterCard(props) {
     return <div className={"character-card-wrapper"}>
         <div className={"character-image"} style={{backgroundImage: `url(${props.img})`}}></div>
         <div className="character-caption">
-            <p className={alive === true ? 'green-text' : 'red-text'}>{alive === true ? 'Живой' : 'Мертвый'}</p>
+            <p className={props.status === true ? 'green-text' : 'red-text'}>{alive === true ? 'Живой' : 'Мертвый'}</p>
             <p className="title">{props.name}</p>
             <p className="grey-text">{props.caption}</p>
         </div>
